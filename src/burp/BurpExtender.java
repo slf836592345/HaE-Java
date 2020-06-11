@@ -591,10 +591,10 @@ public class BurpExtender implements IBurpExtender, IHttpListener, IMessageEdito
 	}
 
 	private static void saveConfig(String configText) throws IOException {
-		String config = "";
+//		String config = "";
 		try {
-			XmlFormatter formatter = new XmlFormatter();
-			config = formatter.format(config);
+//			XmlFormatter formatter = new XmlFormatter();
+//			config = formatter.format(config);
 			File file = new File(".", configPath);
 			BufferedWriter out = new BufferedWriter(new FileWriter(file));
 			out.write(configText);
