@@ -25,6 +25,12 @@ HaE-Java是基于Java开发的一款burpsuite插件，其内置并支持自定�
 2、切换到burpsuite的extender标签页，加载HaE-Java.jar即可使用
 
 
+**截图：**
+1、添加单个配置项。add增加，reload生效。
+![image-1](images/1.jpg)
+2、修改配置项。load加载，save保存，reload生效。
+![image-2](images/2.jpg)
+3、高亮敏感请求，并在response标签页添加一个MarkInfo-Java子标签页，提取敏感数据。
+![image-3](images/3.jpg)
 
-![image-20200611012603138](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20200611012603138.png)
 
