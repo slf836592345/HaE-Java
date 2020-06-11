@@ -1,4 +1,4 @@
-# **HaE-Java  信息高亮与提取者（Java版本）**
+# **HaE-Java  信息高亮与提取插件（Java版本）**
 
 设计灵感及代码实现参考了： https://github.com/gh0stkey/HaE，在此表示感谢
 
