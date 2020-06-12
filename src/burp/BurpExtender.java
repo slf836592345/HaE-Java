@@ -167,10 +167,12 @@ public class BurpExtender implements IBurpExtender, IHttpListener, IMessageEdito
 		for (Iterator<Item> i = itemList.iterator(); i.hasNext();) {
 			Item item = (Item) i.next();
 			try {
-				Matcher match = Pattern.compile(item.getRegex()).matcher(new String(content, "UTF-8"));
+				String contentStr = new String(content, "UTF-8");
+				Matcher match = Pattern.compile(item.getRegex()).matcher(contentStr);
 				String lines = "";
 				int count = 0;
 				while (match.find()) {
+
 					if (match.groupCount() == 0) {
 						lines += match.group() + "\n";
 
@@ -181,7 +183,7 @@ public class BurpExtender implements IBurpExtender, IHttpListener, IMessageEdito
 				}
 				if (count > 0) {
 					if (item.getExtract() == 1) {
-						markInfoSet.add(item.getName().strip() + " --> " + lines.strip());
+						markInfoSet.add("[" + item.getName().strip() + "]" + ":\r\n" + lines.strip() + "\r\n");
 					}
 					matchItemList.add(item);
 				}
