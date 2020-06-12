@@ -2,7 +2,7 @@
 <config>
     <item>
         <name>Email</name>
-        <color>yellow</color>
+        <color>green</color>
         <highlight>1</highlight>
         <regex>[\w-]+(?:\.[\w-]+)*@(?:[\w](?:[\w-]*[\w])?\.)+[\w](?:[\w-]*[\w])?</regex>
         <extract>1</extract>
@@ -10,7 +10,7 @@
     </item>
     <item>
         <name>Chinese IDCard</name>
-        <color>cyan</color>
+        <color>yellow</color>
         <highlight>1</highlight>
         <regex>[1-9]\d{5}(?:19|20)\d\d(?:0[1-9]|1[012])(?:0[1-9]|[12]\d|3[01])\d{3}(?:\d|X)</regex>
         <extract>1</extract>
@@ -18,7 +18,7 @@
     </item>
     <item>
         <name>Internal IP Address</name>
-        <color>orange</color>
+        <color>green</color>
         <highlight>1</highlight>
         <regex>(?:10\.\d{1,3}\.\d{1,3}\.\d{1,3})|(?:172\.(?:(?:1[6-9])|(?:2\d)|(?:3[01]))\.\d{1,3}\.\d{1,3})|(?:192\.168\.\d{1,3}\.\d{1,3})</regex>
         <extract>1</extract>
