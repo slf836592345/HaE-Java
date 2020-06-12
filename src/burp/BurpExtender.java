@@ -51,7 +51,7 @@ import javax.swing.DefaultComboBoxModel;
 
 public class BurpExtender implements IBurpExtender, IHttpListener, IMessageEditorTabFactory, ITab {
 	private static String configPath = "HaE-Java.xml";
-	private static List<Item> itemList;
+	private static List<Item> itemList = new ArrayList<Item>();;
 	private static PrintWriter stdout;
 	private static IMessageEditorTab markInfoTab;
 	private IBurpExtenderCallbacks callbacks;
@@ -514,10 +514,11 @@ public class BurpExtender implements IBurpExtender, IHttpListener, IMessageEdito
 	}
 
 	private static List<Item> initConfig() {
+		clearCache();
 		try {
 			File configFile = new File(".", configPath);
 			List<Node> itemNodeList = new SAXReader().read(configFile).selectNodes("//config/item");
-			itemList = new ArrayList<Item>();
+//			itemList = new ArrayList<Item>();
 			if (itemNodeList != null) {
 				for (Iterator<Node> i = itemNodeList.iterator(); i.hasNext();) {
 					Node itemNode = (Node) i.next();
@@ -606,8 +607,12 @@ public class BurpExtender implements IBurpExtender, IHttpListener, IMessageEdito
 		}
 	}
 
-	private void reloadConfig() {
+	private static void clearCache() {
 		itemList.clear();
+		cacheMap.clear();
+	}
+	
+	private void reloadConfig() {
 		initConfig();
 	}
 

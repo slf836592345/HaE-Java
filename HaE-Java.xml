@@ -14,7 +14,7 @@
         <highlight>1</highlight>
         <regex>[1-9]\d{5}(?:19|20)\d\d(?:0[1-9]|1[012])(?:0[1-9]|[12]\d|3[01])\d{3}(?:\d|X)</regex>
         <extract>1</extract>
-        <enable>1</enable>
+        <enable>0</enable>
     </item>
     <item>
         <name>Internal IP Address</name>
