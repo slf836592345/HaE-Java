@@ -4,7 +4,7 @@
 
 **简介：**
 
-HaE（Highlight and Extract）-Java是基于Java开发的一款burpsuite插件，其内置并支持自定义正则表达式、内置九种高亮颜色，可高亮标记敏感请求，并提取关键数据，方便后续深度挖掘。代码内部维护了一个简单的缓存池，界面响应速度尚可。
+HaE-Java是基于Java开发的一款burpsuite插件，其内置并支持自定义正则表达式、内置九种高亮颜色，可高亮（Highlight）标记敏感请求，并（And）提取（Extract）关键数据，方便后续深度挖掘。代码内部维护了一个简单的缓存池，界面响应速度尚可。
 
 
 
@@ -62,6 +62,7 @@ HaE（Highlight and Extract）-Java是基于Java开发的一款burpsuite插件�
 
 **配置文件格式说明举例：**
 
+```
  <item>
         <name>Email</name>
         <color>green</color>
@@ -70,6 +71,7 @@ HaE（Highlight and Extract）-Java是基于Java开发的一款burpsuite插件�
         <extract>1</extract>
         <enable>1</enable>
     </item>
+```
 
 color代表高亮的颜色，highlight代表是否高亮，regex代表正则，extract代表是否提取关键数据到MarkInfo-Java标签页，enable代表当前配置规则是否生效。
 
