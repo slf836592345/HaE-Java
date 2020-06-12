@@ -56,7 +56,7 @@ HaE-Java是基于Java开发的一款burpsuite插件，其支持自定义正则�
 
 1、颜色列表包括red、orange、yellow、green、cyan、blue、pink、magenta、gray，代表的严重程度是依次递减的。
 
-2、较低严重程度的颜色出现两次之后，高亮的颜色会向上升级一个档次。如cyan出现两次，高亮的颜色将会变为green；orange出现两次，高亮的颜色将会变为red。
+2、较低严重程度的颜色出现两次之后，高亮的颜色会向上升级一个档次。举个例子，对于同一次请求，若cyan出现两次，高亮的颜色将会变为green，若orange出现两次，高亮的颜色将会变为red。
 
 
 
