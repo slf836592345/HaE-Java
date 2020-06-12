@@ -169,21 +169,24 @@ public class BurpExtender implements IBurpExtender, IHttpListener, IMessageEdito
 			try {
 				String contentStr = new String(content, "UTF-8");
 				Matcher match = Pattern.compile(item.getRegex()).matcher(contentStr);
-				String lines = "";
+				Set<String> linesSet = new HashSet<>();
 				int count = 0;
 				while (match.find()) {
-
 					if (match.groupCount() == 0) {
-						lines += match.group() + "\n";
-
+						if (match.group().strip() != "") {
+							linesSet.add(match.group().strip());
+						}
 					} else {
-						lines += match.group(1) + "\n";
+						if (match.group(1).strip() != "") {
+							linesSet.add(match.group(1).strip());
+						}
 					}
 					count++;
 				}
 				if (count > 0) {
 					if (item.getExtract() == 1) {
-						markInfoSet.add("[" + item.getName().strip() + "]" + ":\r\n" + lines.strip() + "\r\n");
+						String lines = new ArrayList<String>(linesSet).toString();
+						markInfoSet.add("-" + item.getName().strip() + "-" + ":\r\n" + lines.strip());
 					}
 					matchItemList.add(item);
 				}
